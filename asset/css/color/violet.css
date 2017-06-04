@@ -12,14 +12,14 @@ textarea:focus ~ .title,
 textarea:valid ~ .title,
 #counter .soon-label,
 #counter .soon-ring-progress{
-	color:#7C36A6;
+	color:#fccc3b;
 }
 .bar:before,
 .bar:after,
 .service:hover .service-icon,
 .background.solid{
-	background:#7C36A6;
+	background:#fccc3b;
 }
 .service:hover .circle-border{
-	border-color:#7C36A6;
+	border-color:#fccc3b;
 }

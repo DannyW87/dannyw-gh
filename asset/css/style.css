@@ -336,7 +336,7 @@ p {
 }
 /* BUBBLE BACKGROUND */
 .background.bubble{
-	background:url(../img/bubble.jpg)!important;
+	background:url(../img/floor-bg.jpg)!important;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
