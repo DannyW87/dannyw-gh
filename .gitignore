@@ -1,4 +1,4 @@
 asset/media/
 node_modules/
-assets/
+/assets/
 *.sass-cache*
