@@ -107,9 +107,12 @@
 	}
 
 	h1 {
-		font-size: 1.85em;
+		font-size: 2.85em;
+		font-family: _font(title);
 		letter-spacing: (_size(letter-spacing) * 1.1);
 		margin: 0 0 (_size(element-margin) * 0.35) 0;
+		text-transform: none;
+		letter-spacing: normal;
 	}
 
 	h2 {

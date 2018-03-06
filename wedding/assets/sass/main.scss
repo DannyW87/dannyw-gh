@@ -4,6 +4,7 @@
 @import 'libs/skel';
 @import 'font-awesome.min.css';
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700');
 
 /*
 	Identity by HTML5 UP
@@ -17,7 +18,8 @@
 		medium: '(max-width: 960px)',
 		small: '(max-width: 736px)',
 		xsmall: '(max-width: 480px)',
-		xxsmall: '(max-width: 360px)'
+		xxsmall: '(max-width: 360px)',
+		medium-up: '(min-width: 480px)'
 	));
 
 	@include skel-layout((

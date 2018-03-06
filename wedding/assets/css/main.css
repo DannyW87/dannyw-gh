@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300");
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script:400,700");
 /*
 	Identity by HTML5 UP
 	html5up.net | @ajlkn
@@ -172,9 +173,12 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none; }
 
 h1 {
-  font-size: 1.85em;
+  font-size: 2.85em;
+  font-family: "Dancing Script", cursive;
   letter-spacing: 0.22em;
-  margin: 0 0 0.525em 0; }
+  margin: 0 0 0.525em 0;
+  text-transform: none;
+  letter-spacing: normal; }
 
 h2 {
   font-size: 1.25em; }
@@ -558,13 +562,14 @@ button,
 #main {
   position: relative;
   max-width: 100%;
-  min-width: 27em;
-  padding: 4.5em 3em 3em 3em ;
+  min-width: 40em;
+  padding: 1em;
   background: #ffffff;
   border-radius: 4px;
   cursor: default;
   opacity: 0.95;
   text-align: center;
+  overflow: hidden;
   -moz-transform-origin: 50% 50%;
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
@@ -577,30 +582,103 @@ button,
   -webkit-transition: opacity 2s ease, -webkit-transform 2s ease;
   -ms-transition: opacity 2s ease, -ms-transform 2s ease;
   transition: opacity 2s ease, transform 2s ease; }
+  #main .offcanvas-menu {
+    height: 100%;
+    /* 100% Full-height */
+    width: 250px;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 20;
+    /* Stay on top */
+    top: 0;
+    background-color: #111;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */ }
+    #main .offcanvas-menu .closebtn {
+      position: absolute;
+      color: #fff;
+      top: 0;
+      right: 0;
+      padding: 5px 9px;
+      font-size: 34px;
+      line-height: 34px; }
+    #main .offcanvas-menu ul {
+      list-style: none;
+      color: #fff;
+      padding: 0; }
+      #main .offcanvas-menu ul li {
+        padding: 5px;
+        border-top: 1px solid #fff; }
+        #main .offcanvas-menu ul li:last-child {
+          border-bottom: 1px solid #fff; }
+    @media screen and (min-width: 480px) {
+      #main .offcanvas-menu {
+        display: none; } }
+  #main .content.food, #main .content.the-day {
+    display: none; }
+  #main header {
+    margin-bottom: 1.5em; }
+    #main header .title {
+      width: 100%; }
+    #main header .nav {
+      position: relative; }
+      #main header .nav.desktop {
+        display: none; }
+      #main header .nav .offcanvas,
+      #main header .nav .back {
+        position: absolute;
+        bottom: 43px;
+        left: 15px;
+        z-index: 10; }
+      @media screen and (min-width: 480px) {
+        #main header .nav {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap; }
+          #main header .nav.desktop {
+            display: flex; }
+          #main header .nav.mobile {
+            display: none; }
+          #main header .nav .menu-item,
+          #main header .nav .desktop-back,
+          #main header .nav .avatar {
+            width: 20%; }
+            #main header .nav .menu-item.rsvp,
+            #main header .nav .desktop-back.rsvp,
+            #main header .nav .avatar.rsvp {
+              width: 40%; }
+          #main header .nav .menu-item,
+          #main header .nav .desktop-back {
+            padding-top: 55px; } }
+      #main header .nav:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 40%;
+        left: -1em;
+        width: calc(100% + 2em);
+        height: 1px;
+        z-index: -1;
+        background: #c8cccf; }
   #main .avatar {
     position: relative;
-    display: block;
-    margin-bottom: 1.5em; }
+    display: block; }
     #main .avatar img {
       display: block;
       margin: 0 auto;
       border-radius: 100%;
       box-shadow: 0 0 0 1.5em #ffffff; }
-    #main .avatar:before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: -3em;
-      width: calc(100% + 6em);
-      height: 1px;
-      z-index: -1;
-      background: #c8cccf; }
   @media screen and (max-width: 480px) {
     #main {
       min-width: 0;
       width: 100%;
-      padding: 4em 2em 2.5em 2em ; }
+      padding: 1em; }
       #main .avatar:before {
         left: -2em;
         width: calc(100% + 4em); } }
@@ -611,6 +689,90 @@ button,
     -ms-transform: rotateX(45deg);
     transform: rotateX(45deg); }
 
+.flipped {
+  -webkit-animation: flip-scale-up-ver 1s linear alternate both;
+  animation: flip-scale-up-ver 1s linear alternate both; }
+
+@-webkit-keyframes flip-scale-up-ver {
+  0% {
+    -webkit-transform: scale(1) rotateY(0);
+    transform: scale(1) rotateY(0); }
+  50% {
+    -webkit-transform: scale(1.5) rotateY(-90deg);
+    transform: scale(1.5) rotateY(-90deg); }
+  100% {
+    -webkit-transform: scale(1) rotateY(-180deg);
+    transform: scale(1) rotateY(-180deg); } }
+@keyframes flip-scale-up-ver {
+  0% {
+    -webkit-transform: scale(1) rotateY(0);
+    transform: scale(1) rotateY(0); }
+  50% {
+    -webkit-transform: scale(1.5) rotateY(-90deg);
+    transform: scale(1.5) rotateY(-90deg); }
+  100% {
+    -webkit-transform: scale(1) rotateY(-180deg);
+    transform: scale(1) rotateY(-180deg); } }
+.unflipped {
+  -webkit-animation: flip-scale-up-ver-reverse 1s linear alternate both;
+  animation: flip-scale-up-ver-reverse 1s linear alternate both; }
+
+@-webkit-keyframes flip-scale-up-ver-reverse {
+  0% {
+    -webkit-transform: scale(1) rotateY(-180deg);
+    transform: scale(1) rotateY(-180deg); }
+  50% {
+    -webkit-transform: scale(1.5) rotateY(-90deg);
+    transform: scale(1.5) rotateY(-90deg); }
+  100% {
+    -webkit-transform: scale(1) rotateY(0);
+    transform: scale(1) rotateY(0); } }
+@keyframes flip-scale-up-ver-reverse {
+  0% {
+    -webkit-transform: scale(1) rotateY(-180deg);
+    transform: scale(1) rotateY(-180deg); }
+  50% {
+    -webkit-transform: scale(1.5) rotateY(-90deg);
+    transform: scale(1.5) rotateY(-90deg); }
+  100% {
+    -webkit-transform: scale(1) rotateY(0);
+    transform: scale(1) rotateY(0); } }
+.content-flipped {
+  -webkit-animation: flip-vertical-right 0.01s steps(1, end) 0.5s both;
+  animation: flip-vertical-right 0.01s steps(1, end) 0.5s both; }
+
+@-webkit-keyframes flip-vertical-right {
+  0% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0); }
+  100% {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg); } }
+@keyframes flip-vertical-right {
+  0% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0); }
+  100% {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg); } }
+.content-unflipped {
+  -webkit-animation: flip-vertical-right-reverse 0.01s steps(1, end) 0.5s both;
+  animation: flip-vertical-right-reverse 0.01s steps(1, end) 0.5s both; }
+
+@-webkit-keyframes flip-vertical-right-reverse {
+  0% {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg); }
+  100% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0); } }
+@keyframes flip-vertical-right-reverse {
+  0% {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg); }
+  100% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0); } }
 /* Footer */
 #footer {
   -moz-align-self: -moz-flex-end;

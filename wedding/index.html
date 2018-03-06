@@ -6,6 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="assets/js/main.js"></script>
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -18,13 +20,43 @@
 
 				<!-- Main -->
 					<section id="main">
+						<div class="offcanvas-menu" id="offcanvas" style="left: -250px;">
+							<a href="#" class="closebtn">&times;</a>
+							<ul class="nav">
+								<li class="menu-item"><a href="#" class="the-day"><span>The Day</span></a></li>
+								<li class="menu-item"><a href="#" class="food"><span>Food</span></a></li>
+								<li class="menu-item rsvp"><a href="rsvp.html" ><span>R.S.V.P</span></a></li>
+							</ul>
+						</div>
 						<header>
-							<span class="avatar"><img src="images/flowers-small.jpg" alt="" width="122px" /></span>
+							<div class="title"><h1><a href="index.html">Danny &amp; Lisa's Wedding</a></h1></div>
+							<div class="nav mobile">
+								<span class="item offcanvas"><a href="#"><span>Menu</span></a></span>
+								<span class="avatar"><img src="images/flowers-small.jpg" alt="" width="122px" /></span>
+							</div>
+							<div class="nav desktop">
+								<span class="menu-item"><a href="#" class="the-day"><span>The Day</span></a></span>
+								<span class="menu-item"><a href="#" class="food"><span>Food</span></a></span>
+								<span class="avatar"><img src="images/flowers-small.jpg" alt="" width="122px" /></span>
+								<span class="menu-item rsvp"><a href="rsvp.html"><span>R.S.V.P</span></a></span>
+							</div>
+							
+						</header>
+
+						<div class="content index">
 							<h1>Daniel Williams <br />&amp;<br />Lisa Marie Smith</h1>
 							<p>The Wedding</p>
 							<p>14<sup>TH</sup> September 2018</p>
 							<p class="focus-in-expand"><strong>More Details Soon</strong></p>
-						</header>
+						</div>
+						<div class="content the-day">
+							<h1>On The Day</h1>
+							<p>Content to go here</p>
+						</div>
+						<div class="content food">
+							<h1>Food Menu</h1>
+							<p>Content to go here</p>
+						</div>
 						<!--
 						<hr />
 						<h2>Extra Stuff!</h2>

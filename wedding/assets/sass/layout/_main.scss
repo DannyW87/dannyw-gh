@@ -13,14 +13,15 @@
 	#main {
 		position: relative;
 		max-width: 100%;
-		min-width: 27em;
-		@include padding(4.5em, 3em);
+		min-width: 40em;
+		padding: 1em;
 
 		background: _palette(bg);
 		border-radius: _size(border-radius);
 		cursor: default;
 		opacity: 0.95;
 		text-align: center;
+		overflow: hidden;
 
 		@include vendor('transform-origin', '50% 50%');
 		@include vendor('transform', 'rotateX(0deg)');
@@ -29,10 +30,162 @@
 			'transform #{_duration(main)} ease'
 		));
 
+		.offcanvas-menu {
+
+			height: 100%; /* 100% Full-height */
+		    width: 250px; /* 0 width - change this with JavaScript */
+		    position: fixed; /* Stay in place */
+		    z-index: 20; /* Stay on top */
+		    top: 0;
+		    background-color: #111; /* Black*/
+		    overflow-x: hidden; /* Disable horizontal scroll */
+		    padding-top: 60px; /* Place content 60px from the top */
+		    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+
+		    .closebtn {
+
+	    	    position: absolute;
+			    color: #fff;
+			    top: 0;
+			    right: 0;
+			    padding: 5px 9px;
+			    font-size: 34px;
+			    line-height: 34px;
+
+		    }
+
+		    ul {
+
+		    	list-style: none;
+	    	    color: #fff;
+    			padding: 0;
+
+    			li {
+
+    				padding: 5px;
+    				border-top: 1px solid #fff;
+    				
+    				&:last-child {
+
+    					border-bottom: 1px solid #fff;
+
+    				}
+
+    			}
+
+		    }
+
+		    @include breakpoint(medium-up) {
+
+		    	display: none;
+
+		    }
+		
+		}
+
+		.content {
+
+			&.food,
+			&.the-day {
+
+				display: none;
+
+			}
+
+		}
+
+		header {
+
+			
+			margin-bottom: _size(element-margin);
+
+			.title {
+
+				width: 100%;
+
+			}
+
+			.nav {
+
+				&.desktop {
+
+					display: none;
+				
+				}
+
+				.offcanvas,
+				.back {
+
+					position: absolute;
+					bottom: 43px;
+					left: 15px;
+					z-index: 10;
+
+				}
+
+
+				position: relative;
+
+				@include breakpoint(medium-up) {
+
+					display: flex;
+					justify-content: space-between;
+					flex-wrap: wrap;
+
+					&.desktop {
+
+						display: flex;
+
+					}
+
+					&.mobile {
+
+						display: none;
+
+					}
+
+					.menu-item,
+					.desktop-back,
+					.avatar {
+
+						width: 20%;
+
+						&.rsvp {
+
+							width: 40%;
+
+						}
+
+					}
+
+					.menu-item,
+					.desktop-back {
+
+						padding-top: 55px;
+
+					}
+
+				}
+
+				&:before {
+					content: '';
+					display: block;
+					position: absolute;
+					top: 40%;
+					left: -1em;
+					width: calc(100% + 2em);
+					height: _size(border-width);
+					z-index: -1;
+					background: _palette(border);
+				}
+
+			}
+
+		}
+
 		.avatar {
 			position: relative;
 			display: block;
-			margin-bottom: _size(element-margin);
 
 			img {
 				display: block;
@@ -41,23 +194,13 @@
 				box-shadow: 0 0 0 1.5em _palette(bg);
 			}
 
-			&:before {
-				content: '';
-				display: block;
-				position: absolute;
-				top: 50%;
-				left: -3em;
-				width: calc(100% + 6em);
-				height: _size(border-width);
-				z-index: -1;
-				background: _palette(border);
-			}
+			
 		}
 
 		@include breakpoint(xsmall) {
 			min-width: 0;
 			width: 100%;
-			@include padding(4em, 2em);
+			padding: 1em;
 
 			.avatar {
 				&:before {
@@ -71,4 +214,130 @@
 			opacity: 0;
 			@include vendor('transform', 'rotateX(45deg)');
 		}
+
 	}
+
+
+	.flipped {
+		-webkit-animation: flip-scale-up-ver 1s linear alternate both;
+    	animation: flip-scale-up-ver 1s linear alternate both;
+	}
+
+	@-webkit-keyframes flip-scale-up-ver {
+	  0% {
+	    -webkit-transform: scale(1) rotateY(0);
+	            transform: scale(1) rotateY(0);
+	  }
+	  50% {
+	    -webkit-transform: scale(1.5) rotateY(-90deg);
+	            transform: scale(1.5) rotateY(-90deg);
+	  }
+	  100% {
+	    -webkit-transform: scale(1) rotateY(-180deg);
+	            transform: scale(1) rotateY(-180deg);
+	  }
+	}
+	@keyframes flip-scale-up-ver {
+	  0% {
+	    -webkit-transform: scale(1) rotateY(0);
+	            transform: scale(1) rotateY(0);
+	  }
+	  50% {
+	    -webkit-transform: scale(1.5) rotateY(-90deg);
+	            transform: scale(1.5) rotateY(-90deg);
+	  }
+	  100% {
+	    -webkit-transform: scale(1) rotateY(-180deg);
+	            transform: scale(1) rotateY(-180deg);
+	  }
+	}
+
+	.unflipped {
+		-webkit-animation: flip-scale-up-ver-reverse 1s linear alternate both;
+    	animation: flip-scale-up-ver-reverse 1s linear alternate both;
+	}
+
+	@-webkit-keyframes flip-scale-up-ver-reverse {
+	  0% {
+	    -webkit-transform: scale(1) rotateY(-180deg);
+	            transform: scale(1) rotateY(-180deg);
+	  }
+	  50% {
+	    -webkit-transform: scale(1.5) rotateY(-90deg);
+	            transform: scale(1.5) rotateY(-90deg);
+	  }
+	  100% {
+	    -webkit-transform: scale(1) rotateY(0);
+	            transform: scale(1) rotateY(0);
+	  }
+	}
+	@keyframes flip-scale-up-ver-reverse {
+	  0% {
+	    -webkit-transform: scale(1) rotateY(-180deg);
+	            transform: scale(1) rotateY(-180deg);
+	  }
+	  50% {
+	    -webkit-transform: scale(1.5) rotateY(-90deg);
+	            transform: scale(1.5) rotateY(-90deg);
+	  }
+	  100% {
+	    -webkit-transform: scale(1) rotateY(0);
+	            transform: scale(1) rotateY(0);
+	  }
+	}
+
+	.content-flipped {
+		-webkit-animation: flip-vertical-right 0.01s steps(1, end) 0.5s both;
+		        animation: flip-vertical-right 0.01s steps(1, end) 0.5s both;
+	}
+
+
+	@-webkit-keyframes flip-vertical-right {
+	  0% {
+	    -webkit-transform: rotateY(0);
+	            transform: rotateY(0);
+	  }
+	  100% {
+	    -webkit-transform: rotateY(180deg);
+	            transform: rotateY(180deg);
+	  }
+	}
+	@keyframes flip-vertical-right {
+	  0% {
+	    -webkit-transform: rotateY(0);
+	            transform: rotateY(0);
+	  }
+	  100% {
+	    -webkit-transform: rotateY(180deg);
+	            transform: rotateY(180deg);
+	  }
+	}
+
+	.content-unflipped {
+		-webkit-animation: flip-vertical-right-reverse 0.01s steps(1, end) 0.5s both;
+		        animation: flip-vertical-right-reverse 0.01s steps(1, end) 0.5s both;
+	}
+
+
+	@-webkit-keyframes flip-vertical-right-reverse {
+	  0% {
+	    -webkit-transform: rotateY(180deg);
+	            transform: rotateY(180deg);
+	  }
+	  100% {
+	    -webkit-transform: rotateY(0);
+	            transform: rotateY(0);
+	  }
+	}
+	@keyframes flip-vertical-right-reverse {
+	  0% {
+	    -webkit-transform: rotateY(180deg);
+	            transform: rotateY(180deg);
+	  }
+	  100% {
+	    -webkit-transform: rotateY(0);
+	            transform: rotateY(0);
+	  }
+	}
+
+
