@@ -61,7 +61,11 @@ $(document).ready(function(){
 			$('.content').delay(500)
 				.queue( function(next){ 
 					$(this).hide();
-					$(this).css( "transform", "rotateY(180deg)" );
+					if($('#main').hasClass('flipped')) {
+						$(this).css( "transform", "rotateY(180deg)" );
+					} else {
+						$(this).css( "transform", "rotateY(0deg)" );
+					}
 					$('.content.the-day').show();
 					next(); 
 				});
@@ -69,7 +73,11 @@ $(document).ready(function(){
 			$('.content').delay(500)
 				.queue( function(next){ 
 					$(this).hide();
-					$(this).css( "transform", "rotateY(0deg)" );
+					if($('#main').hasClass('flipped')) {
+						$(this).css( "transform", "rotateY(180deg)" );
+					} else {
+						$(this).css( "transform", "rotateY(0deg)" );
+					}
 					$('.content.food').show();
 					next(); 
 				});
