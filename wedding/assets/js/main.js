@@ -14,15 +14,29 @@ $(document).ready(function(){
 		}
 
 		if($('#main').hasClass('flipped')) {
-			$('#main, .offcanvas-menu').removeClass('flipped');
-			$('header').removeClass('content-flipped');
-			$('#main, .offcanvas-menu').addClass('unflipped');
-			$('header').addClass('content-unflipped');
+			$('#main').removeClass('flipped');
+			$('.offcanvas-menu').removeClass('flipped2');
+			// $('header').removeClass('content-flipped');
+			$('#main').addClass('unflipped');
+			$('.offcanvas-menu').addClass('unflipped2');
+			// $('header').addClass('content-unflipped');
+			// $('header').delay(500)
+			// 	.queue( function(next){ 
+			// 			$('header').css( "transform", "rotateY(0deg)" );
+			// 		next(); 
+			// 	});
 		} else {
-			$('#main, .offcanvas-menu').removeClass('unflipped');
-			$('#main, .offcanvas-menu').addClass('flipped');
-			$('header').removeClass('content-unflipped');
-			$('header').addClass('content-flipped');
+			$('#main').removeClass('unflipped');
+			$('.offcanvas-menu').removeClass('unflipped2');
+			$('#main').addClass('flipped');
+			$('.offcanvas-menu').addClass('flipped2');
+			// $('header').removeClass('content-unflipped');
+			// $('header').addClass('content-flipped');
+			// $('header').delay(500)
+			// 	.queue( function(next){ 
+			// 			$('header').css( "transform", "rotateY(180deg)" );
+			// 		next(); 
+			// 	});
 		}
 
 		if( $(this).hasClass('the-day') ) {
@@ -31,8 +45,12 @@ $(document).ready(function(){
 					$(this).hide();
 					if($('#main').hasClass('flipped')) {
 						$(this).css( "transform", "rotateY(180deg)" );
+						$('header').css( "transform", "rotateY(180deg)" );
+						$('.offcanvas-menu').css( "transform", "rotateY(180deg)" );
 					} else {
 						$(this).css( "transform", "rotateY(0deg)" );
+						$('header').css( "transform", "rotateY(0deg)" );
+						$('.offcanvas-menu').css( "transform", "rotateY(0deg)" );
 					}
 					$('.content.the-day').show();
 					next(); 
@@ -43,8 +61,12 @@ $(document).ready(function(){
 					$(this).hide();
 					if($('#main').hasClass('flipped')) {
 						$(this).css( "transform", "rotateY(180deg)" );
+						$('header').css( "transform", "rotateY(180deg)" );
+						$('.offcanvas-menu').css( "transform", "rotateY(180deg)" );
 					} else {
 						$(this).css( "transform", "rotateY(0deg)" );
+						$('header').css( "transform", "rotateY(0deg)" );
+						$('.offcanvas-menu').css( "transform", "rotateY(0deg)" );
 					}
 					$('.content.food').show();
 					next(); 
@@ -86,7 +108,7 @@ $(document).ready(function(){
 
 	$('.item.offcanvas').click(function(e) { // Fix flipped offcanvas menu
 		e.preventDefault();
-		if( $('.offcanvas-menu').hasClass('flipped') ) {
+		if( $('.offcanvas-menu').hasClass('flipped2') ) {
 			$('#offcanvas').css( "left", "" );
 			$('#offcanvas').css( "right", "0" );
 		} else {
@@ -97,7 +119,7 @@ $(document).ready(function(){
 
 	$('.closebtn').click(function(e) {
 		e.preventDefault();
-		if( $('.offcanvas-menu').hasClass('flipped') ) {
+		if( $('.offcanvas-menu').hasClass('flipped2') ) {
 			$('#offcanvas').css( "right", "-250px" );
 		} else {
 			$('#offcanvas').css( "left", "-250px" );
