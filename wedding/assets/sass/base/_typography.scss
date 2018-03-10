@@ -65,6 +65,20 @@
 	.focus-in-expand {
 		-webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s both;
 		        animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s both;
+
+		        &.two {
+
+		        	-webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3.3s both;
+		        	animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3.3s both;
+
+		        }
+
+		        &.three {
+
+		        	-webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4.1s both;
+		        	animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4.1s both;
+
+		        }
 	}
 
 	@-webkit-keyframes focus-in-expand {
@@ -137,7 +151,7 @@
 
 	@include breakpoint(xsmall) {
 		h1 {
-			font-size: 1.65em;
+			font-size: 2em;
 		}
 	}
 

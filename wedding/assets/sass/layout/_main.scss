@@ -12,7 +12,7 @@
 
 	#main {
 		position: relative;
-		max-width: 100%;
+		max-width: 40em;
 		min-width: 40em;
 		padding: 1em;
 
@@ -90,6 +90,46 @@
 
 				display: none;
 
+				h2 {
+
+					margin: 15px 0 5px;
+
+				}
+
+
+				p,
+				li {
+
+					text-transform: none;
+				    line-height: 21px;
+    				letter-spacing: 0;
+
+				}
+
+				ul {
+
+					text-align: left;
+
+				}
+
+				li {
+
+					margin-bottom: 10px;
+
+				}
+
+				p {
+
+					margin-bottom: 10px;
+
+				}
+
+				a {
+
+					color: #f7194f;
+
+				}
+
 			}
 
 		}
@@ -102,6 +142,55 @@
 			.title {
 
 				width: 100%;
+
+				a {
+
+					position: relative;
+
+					&::after {
+
+						content: 'homepage';
+					    font-family: "Source Sans Pro", Helvetica, sans-serif;
+					    position: absolute;
+					    right: 28px;
+					    bottom: -7px;
+					    font-size: 15px;
+					    opacity: 0;
+					    -webkit-transition: .5s;
+						-moz-transition: .5s;
+						-ms-transition: .5s;
+						-o-transition: .5s;
+						transition: .5s;
+
+						@include breakpoint(medium-only) {
+
+							opacity: 1;
+							bottom: -11px;
+
+						}
+
+					}
+
+					&:hover {
+
+						&::after {
+
+							@include breakpoint(medium-up) {
+
+								opacity: 1;
+								-webkit-transition: .5s;
+								-moz-transition: .5s;
+								-ms-transition: .5s;
+								-o-transition: .5s;
+								transition: .5s;
+
+							}
+
+						}
+
+					}
+
+				}
 
 			}
 
@@ -162,6 +251,12 @@
 					.desktop-back {
 
 						padding-top: 55px;
+
+						a.active {
+
+							color: #f7194f;
+
+						}
 
 					}
 

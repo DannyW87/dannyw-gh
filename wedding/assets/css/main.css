@@ -143,6 +143,12 @@ p {
 .focus-in-expand {
   -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2.5s both;
   animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2.5s both; }
+  .focus-in-expand.two {
+    -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 3.3s both;
+    animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 3.3s both; }
+  .focus-in-expand.three {
+    -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 4.1s both;
+    animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 4.1s both; }
 
 @-webkit-keyframes focus-in-expand {
   0% {
@@ -197,7 +203,7 @@ h6 {
 
 @media screen and (max-width: 480px) {
   h1 {
-    font-size: 1.65em; } }
+    font-size: 2em; } }
 sub {
   font-size: 0.8em;
   position: relative;
@@ -561,7 +567,7 @@ button,
 /* Main */
 #main {
   position: relative;
-  max-width: 100%;
+  max-width: 40em;
   min-width: 40em;
   padding: 1em;
   background: #ffffff;
@@ -622,10 +628,53 @@ button,
         display: none; } }
   #main .content.food, #main .content.the-day {
     display: none; }
+    #main .content.food h2, #main .content.the-day h2 {
+      margin: 15px 0 5px; }
+    #main .content.food p,
+    #main .content.food li, #main .content.the-day p,
+    #main .content.the-day li {
+      text-transform: none;
+      line-height: 21px;
+      letter-spacing: 0; }
+    #main .content.food ul, #main .content.the-day ul {
+      text-align: left; }
+    #main .content.food li, #main .content.the-day li {
+      margin-bottom: 10px; }
+    #main .content.food p, #main .content.the-day p {
+      margin-bottom: 10px; }
+    #main .content.food a, #main .content.the-day a {
+      color: #f7194f; }
   #main header {
     margin-bottom: 1.5em; }
     #main header .title {
       width: 100%; }
+      #main header .title a {
+        position: relative; }
+        #main header .title a::after {
+          content: 'homepage';
+          font-family: "Source Sans Pro", Helvetica, sans-serif;
+          position: absolute;
+          right: 28px;
+          bottom: -7px;
+          font-size: 15px;
+          opacity: 0;
+          -webkit-transition: .5s;
+          -moz-transition: .5s;
+          -ms-transition: .5s;
+          -o-transition: .5s;
+          transition: .5s; }
+          @media screen and (min-width: 560px) and (max-width: 1024px) {
+            #main header .title a::after {
+              opacity: 1;
+              bottom: -11px; } }
+        @media screen and (min-width: 480px) {
+          #main header .title a:hover::after {
+            opacity: 1;
+            -webkit-transition: .5s;
+            -moz-transition: .5s;
+            -ms-transition: .5s;
+            -o-transition: .5s;
+            transition: .5s; } }
     #main header .nav {
       position: relative; }
       #main header .nav.desktop {
@@ -655,7 +704,10 @@ button,
               width: 40%; }
           #main header .nav .menu-item,
           #main header .nav .desktop-back {
-            padding-top: 55px; } }
+            padding-top: 55px; }
+            #main header .nav .menu-item a.active,
+            #main header .nav .desktop-back a.active {
+              color: #f7194f; } }
       #main header .nav:before {
         content: '';
         display: block;
