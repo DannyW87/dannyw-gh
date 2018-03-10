@@ -20,7 +20,8 @@
 		xsmall: '(max-width: 480px)',
 		xxsmall: '(max-width: 360px)',
 		medium-up: '(min-width: 480px)',
-		medium-only: '(min-width:560px) and (max-width:1024px)'
+		medium-only: '(min-width:560px) and (max-width:1024px)',
+		large-up: '(min-width: 961px)'
 	));
 
 	@include skel-layout((

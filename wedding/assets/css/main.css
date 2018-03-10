@@ -71,7 +71,7 @@ body {
   background-image: url("images/overlay.png"), linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/table.jpg");
   background-repeat: repeat,			no-repeat,			no-repeat;
   background-size: 100px 100px,	cover,				cover;
-  background-position: top left,		center center,		bottom center;
+  background-position: top left,		center center,		center right;
   background-attachment: fixed,			fixed,				fixed; }
   body:after {
     content: '';
@@ -741,11 +741,11 @@ button,
     -ms-transform: rotateX(45deg);
     transform: rotateX(45deg); }
 
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 1024px) {
   .flipped {
     -webkit-transform: scale(1) rotateY(-180deg) !important;
     transform: scale(1) rotateY(-180deg) !important; } }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 1025px) {
   .flipped {
     -webkit-animation: flip-scale-up-ver 1s linear alternate both;
     animation: flip-scale-up-ver 1s linear alternate both; } }
@@ -784,11 +784,11 @@ button,
   100% {
     -webkit-transform: scale(1) rotateY(-180deg);
     transform: scale(1) rotateY(-180deg); } }
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 1024px) {
   .unflipped {
     -webkit-transform: scale(1) rotateY(0);
     transform: scale(1) rotateY(0); } }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 1025px) {
   .unflipped {
     -webkit-animation: flip-scale-up-ver-reverse 1s linear alternate both;
     animation: flip-scale-up-ver-reverse 1s linear alternate both; } }

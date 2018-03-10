@@ -316,14 +316,22 @@
 
 
 	.flipped {
-		@include breakpoint(small) {
-			 -webkit-transform: scale(1) rotateY(-180deg) !important;
+		@media screen and (max-width: 1024px) {
+			-webkit-transform: scale(1) rotateY(-180deg) !important;
 	            transform: scale(1) rotateY(-180deg) !important;
-	    }
-	    @include breakpoint(medium-up) {
-	    	-webkit-animation: flip-scale-up-ver 1s linear alternate both;
+		}
+		@media screen and (min-width: 1025px) {
+			-webkit-animation: flip-scale-up-ver 1s linear alternate both;
 	    	animation: flip-scale-up-ver 1s linear alternate both;
-	    }
+		}
+		// @include breakpoint(small) {
+		// 	 -webkit-transform: scale(1) rotateY(-180deg) !important;
+	 //            transform: scale(1) rotateY(-180deg) !important;
+	 //    }
+	 //    @include breakpoint(medium-up) {
+	 //    	-webkit-animation: flip-scale-up-ver 1s linear alternate both;
+	 //    	animation: flip-scale-up-ver 1s linear alternate both;
+	 //    }
 	}
 
 	@-webkit-keyframes flip-scale-up-ver {
@@ -377,14 +385,22 @@
 	}
 
 	.unflipped {
-		@include breakpoint(small) {
+		@media screen and (max-width: 1024px) {
 			-webkit-transform: scale(1) rotateY(0);
-	            transform: scale(1) rotateY(0);
-	    }
-	    @include breakpoint(medium-up) {
-	    	-webkit-animation: flip-scale-up-ver-reverse 1s linear alternate both;
+            transform: scale(1) rotateY(0);
+		}
+		@media screen and (min-width: 1025px) {
+			-webkit-animation: flip-scale-up-ver-reverse 1s linear alternate both;
     		animation: flip-scale-up-ver-reverse 1s linear alternate both;
-	    }
+		}
+		// @include breakpoint(small) {
+		// 	-webkit-transform: scale(1) rotateY(0);
+	 //            transform: scale(1) rotateY(0);
+	 //    }
+	 //    @include breakpoint(medium-up) {
+	 //    	-webkit-animation: flip-scale-up-ver-reverse 1s linear alternate both;
+  //   		animation: flip-scale-up-ver-reverse 1s linear alternate both;
+	 //    }
 		
 	}
 
