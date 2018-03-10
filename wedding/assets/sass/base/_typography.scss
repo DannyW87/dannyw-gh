@@ -64,9 +64,8 @@
 
 	.focus-in-expand {
 
-		@include breakpoint(small) {
-			letter-spacing: 1px;
-		}
+		@include breakpoint(medium-up) {
+		
 		-webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s both;
 		        animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s both;
 
@@ -83,6 +82,7 @@
 		        	animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4.1s both;
 
 		        }
+		    }
 	}
 
 	@-webkit-keyframes focus-in-expand {
