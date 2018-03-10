@@ -57,31 +57,31 @@ $(document).ready(function(){
 		e.preventDefault();
 		$('#offcanvas').css( "left", "-250px" );
 
-		if( $(this).hasClass('the-day') ) {
-			$('.content').delay(500)
-				.queue( function(next){ 
-					$(this).hide();
-					if($('#main').hasClass('flipped')) {
-						$(this).css( "transform", "rotateY(180deg)" );
-					} else {
-						$(this).css( "transform", "rotateY(0deg)" );
-					}
-					$('.content.the-day').show();
-					next(); 
-				});
-		} else if( $(this).hasClass('food') ) {
-			$('.content').delay(500)
-				.queue( function(next){ 
-					$(this).hide();
-					if($('#main').hasClass('flipped')) {
-						$(this).css( "transform", "rotateY(180deg)" );
-					} else {
-						$(this).css( "transform", "rotateY(0deg)" );
-					}
-					$('.content.food').show();
-					next(); 
-				});
-		}
+		// if( $(this).hasClass('the-day') ) {
+		// 	$('.content').delay(500)
+		// 		.queue( function(next){ 
+		// 			$(this).hide();
+		// 			if($('#main').hasClass('flipped')) {
+		// 				$(this).css( "transform", "rotateY(180deg)" );
+		// 			} else {
+		// 				$(this).css( "transform", "rotateY(0deg)" );
+		// 			}
+		// 			$('.content.the-day').show();
+		// 			next(); 
+		// 		});
+		// } else if( $(this).hasClass('food') ) {
+		// 	$('.content').delay(500)
+		// 		.queue( function(next){ 
+		// 			$(this).hide();
+		// 			if($('#main').hasClass('flipped')) {
+		// 				$(this).css( "transform", "rotateY(180deg)" );
+		// 			} else {
+		// 				$(this).css( "transform", "rotateY(0deg)" );
+		// 			}
+		// 			$('.content.food').show();
+		// 			next(); 
+		// 		});
+		// }
 	});
 
 	$('.item.offcanvas').click(function(e) { // Fix flipped offcanvas menu
