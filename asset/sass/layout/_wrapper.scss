@@ -37,6 +37,14 @@
 					color: #C8102E;
 				}
 
+				.pinpoint {
+					color: #00569B;
+				}
+
+				.certification {
+					max-width: 70px;
+				}
+
 				> header {
 
 					// Line.
@@ -143,11 +151,14 @@
 				margin: 0;
 
 				> header {
-					padding: ($pad * $tbFactor) $pad;
+					padding: ($pad / 2) $pad;
+					z-index: 10;
 				}
 
 				> .content {
-					padding: ($pad * $tbFactor) $pad;
+					padding: ($pad / 2) $pad ($pad * $tbFactor);
+					z-index: 10;
+					background: #fff;
 
 					> section {
 						margin: ($pad * $tbFactor) 0;
@@ -179,6 +190,15 @@
 
 		position: relative;
 		width: 100vw;
+
+		.logo {
+			width: 50px;
+			position: fixed;
+			right: 20px;
+			top: 20px;
+			border: 1px solid #c1c1c1;
+			z-index: 9;
+		}
 
 		// Background.
 			&:before {
@@ -341,6 +361,11 @@
 						> .content {
 							height: 100vh;
 							max-width: none;
+
+							@include breakpoint('<=medium') {
+								height: 50vh;
+								z-index: 8;
+							}
 						}
 					}
 
@@ -448,7 +473,7 @@
 						background-image: url('../../images/background-code.png');
 						background-position: 25% 50%;
 						background-repeat: repeat-y;
-						background-size: 40rem auto;
+						background-size: 42rem auto;
 
 						> * {
 							max-width: 25rem;
@@ -483,6 +508,7 @@
 					> .content {
 						> :last-child {
 							margin-bottom: 0;
+							text-align: center;
 						}
 
 						> section {

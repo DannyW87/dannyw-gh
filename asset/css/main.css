@@ -1995,6 +1995,13 @@ ul.feature-icons {
   position: relative;
   width: 100vw;
   padding: 0 0 10rem 0; }
+  #wrapper .logo {
+    width: 50px;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    border: 1px solid #c1c1c1;
+    z-index: 9; }
   #wrapper:before {
     background-attachment: fixed;
     background-color: #FDCD3B;
@@ -2089,6 +2096,10 @@ ul.feature-icons {
       #wrapper > section.intro > .content {
         height: 100vh;
         max-width: none; }
+        @media screen and (max-width: 1152px) {
+          #wrapper > section.intro > .content {
+            height: 50vh;
+            z-index: 8; } }
     #wrapper > section:last-of-type > header:before {
       height: 100%; }
     #wrapper > section:last-of-type > header:after {
@@ -2120,6 +2131,10 @@ ul.feature-icons {
     color: #f46f25; }
   #wrapper > section .liverpool {
     color: #C8102E; }
+  #wrapper > section .pinpoint {
+    color: #00569B; }
+  #wrapper > section .certification {
+    max-width: 70px; }
   #wrapper > section > header:before {
     height: calc(100% + 10rem);
     left: calc(50vw - 5rem); }
@@ -2163,6 +2178,10 @@ ul.feature-icons {
         color: #f46f25; }
       #wrapper > section .liverpool {
         color: #C8102E; }
+      #wrapper > section .pinpoint {
+        color: #00569B; }
+      #wrapper > section .certification {
+        max-width: 70px; }
       #wrapper > section > header:before {
         height: calc(100% + 8rem);
         left: calc(50vw - 4rem); }
@@ -2226,7 +2245,7 @@ ul.feature-icons {
           background-image: url("../../images/background-code.png");
           background-position: 25% 50%;
           background-repeat: repeat-y;
-          background-size: 40rem auto; }
+          background-size: 42rem auto; }
           #wrapper > section > header > * {
             max-width: 25rem; }
           #wrapper > section > header > :last-child {
@@ -2238,7 +2257,8 @@ ul.feature-icons {
           #wrapper > section > header h1:after, #wrapper > section > header h2:after {
             display: none; }
         #wrapper > section > .content > :last-child {
-          margin-bottom: 0; }
+          margin-bottom: 0;
+          text-align: center; }
         #wrapper > section > .content > section {
           left: 0; }
           #wrapper > section > .content > section:first-child {
@@ -2273,9 +2293,12 @@ ul.feature-icons {
       #wrapper > section {
         margin: 0; }
         #wrapper > section > header {
-          padding: 4rem 4rem; }
+          padding: 2rem 4rem;
+          z-index: 10; }
         #wrapper > section > .content {
-          padding: 4rem 4rem; }
+          padding: 2rem 4rem 4rem;
+          z-index: 10;
+          background: #fff; }
           #wrapper > section > .content > section {
             margin: 4rem 0; }
         #wrapper > section > footer {
@@ -2290,9 +2313,12 @@ ul.feature-icons {
     #wrapper > section {
       margin: 0; }
       #wrapper > section > header {
-        padding: 3rem 2rem; }
+        padding: 1rem 2rem;
+        z-index: 10; }
       #wrapper > section > .content {
-        padding: 3rem 2rem; }
+        padding: 1rem 2rem 3rem;
+        z-index: 10;
+        background: #fff; }
         #wrapper > section > .content > section {
           margin: 3rem 0; }
       #wrapper > section > footer {
@@ -2307,9 +2333,12 @@ ul.feature-icons {
     #wrapper > section {
       margin: 0; }
       #wrapper > section > header {
-        padding: 2.25rem 1.5rem; }
+        padding: 0.75rem 1.5rem;
+        z-index: 10; }
       #wrapper > section > .content {
-        padding: 2.25rem 1.5rem; }
+        padding: 0.75rem 1.5rem 2.25rem;
+        z-index: 10;
+        background: #fff; }
         #wrapper > section > .content > section {
           margin: 2.25rem 0; }
       #wrapper > section > footer {
