@@ -1,4 +1,5 @@
 asset/media/
 node_modules/
 /assets/
+*.css.map
 *.sass-cache*
