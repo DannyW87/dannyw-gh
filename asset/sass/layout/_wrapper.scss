@@ -198,6 +198,10 @@
 			top: 20px;
 			border: 1px solid #c1c1c1;
 			z-index: 9;
+
+			@include breakpoint('<=medium') {
+				display: none;
+			}
 		}
 
 		// Background.

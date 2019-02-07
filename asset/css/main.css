@@ -2002,6 +2002,9 @@ ul.feature-icons {
     top: 20px;
     border: 1px solid #c1c1c1;
     z-index: 9; }
+    @media screen and (max-width: 1152px) {
+      #wrapper .logo {
+        display: none; } }
   #wrapper:before {
     background-attachment: fixed;
     background-color: #FDCD3B;
