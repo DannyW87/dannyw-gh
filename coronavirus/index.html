@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Coronavirus Case Stack Bar - dannyw.co.uk</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Coronavirus Visual Stack Bar of Active cases, recoveries and deaths from around the world and also the United Kingdom" />
+		<meta name="keywords" content="Coronavirus, pandemic, graph, chart, deaths, cases, recoveries, statistics, visual graph, visual chart, united kingdom" />
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="main.css" />
+	</head>
+	<body class="is-preload">
+		<h1 class="page-title">Coronavirus Cases, Recoveries & Deaths</h1>
+		<figure>
+			<div class="y-axis">
+			  <h3>Y-Axis Title</h3>
+			</div>
+		  
+			<div class="graphic">
+		  
+				<div class="day">
+					<h2 class="date">30<sup>th</sup> March 2020</h2>
+					<div class="row">
+						<h6>Worldwide</h6>
+						<div class="chart">
+							<span class="block" title="Active Cases">
+								<span class="value">74%</span>
+							</span>
+							<span class="block" title="Recoveries">
+								<span class="value">21%</span>
+							</span>
+							<span class="block" title="Deaths">
+								<span class="value">5%</span>
+							</span>
+						</div>
+					</div>
+				
+					<div class="row">
+						<h6>UK</h6>
+						<div class="chart">
+							<span class="block" title="Active Cases">
+								<span class="value">93%</span>
+							</span>
+							<span class="block" title="Recoveries">
+								<span class="value">0.7%</span>
+							</span>
+							<span class="block" title="Deaths">
+								<span class="value">6.2%</span>
+							</span>
+						</div>
+					</div>
+				</div>
+		  
+			</div>
+		  
+			<div class="x-axis">
+			  <h3>X-Axis Title</h3>
+			  <ul class="legend">
+				<li>Active Cases</li>
+				<li>Recoveries</li>
+				<li>Deaths</li>
+			  </ul>
+			</div>
+		  
+		  </figure>
+
+		  <script>
+		  $('.value').each(function() {
+				var text = $(this).text();
+				$(this).parent().css('width', text);
+			});
+
+			$('.block').tooltip();
+		  </script>
+
+	</body>
+</html>
